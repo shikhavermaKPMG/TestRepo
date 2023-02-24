@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  variant="Narrow" title="Apex Resources" icon-name="standard:apex">
+        <lightning-button label="Resync" title="Sync resources" icon-name="utility:sync" icon-position="right" class="slds-m-left_x-small" onclick={handleLoad} slot="actions">        
+        </lightning-button>
+        <div style="height: 550px;">
+        <lightning-datatable
+            key-field="name"
+            data={apexResources}
+            columns={datatableColumns}
+            onrowaction={callRowAction}>
+        </lightning-datatable>
+    </div>
+    
+    </lightning-card>
+    
+</template>
